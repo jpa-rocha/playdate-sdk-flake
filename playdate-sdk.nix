@@ -19,7 +19,7 @@
     gdk-pixbuf
     glib
     webkitgtk_4_1
-    xorg.libX11
+    libx11
     stdenv.cc.cc.lib
     libxkbcommon
     wayland
@@ -42,7 +42,7 @@ in
     };
 
     buildInputs = pdcInputs;
-    nativeBuildInputs = [ pkgs.makeWrapper pkgs.wrapGAppsHook ];
+    nativeBuildInputs = [ pkgs.makeWrapper pkgs.wrapGAppsHook3 ];
     dontFixup = true;
 
     installPhase = ''
